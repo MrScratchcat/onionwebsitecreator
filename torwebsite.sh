@@ -1,7 +1,6 @@
 #!/bin/bash
-cd
 echo "sudo service tor restart && sudo service nginx restart" > websiterestart.sh
-echo " echo "webadderss:" && sudo cat /var/lib/tor/hidden_service/hostname && echo " " && echo "here you can edit your html code: \n /var/www/html" " > whereismywebsite.sh
+echo " echo "webadderss:" && sudo cat /var/lib/tor/hidden_service/hostname && echo " " && echo "here you can edit your html code: /var/www/html" " > whereismywebsite.sh
 sudo chmod +x whereismywebsite.sh
 sudo chmod +x websiterestart.sh
 sudo apt update
