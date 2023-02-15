@@ -286,7 +286,7 @@ http {
 #}" > /etc/nginx/nginx.conf
 cd /var/www/html
 sudo rm index.nginx-debian.html
-echo "congratration you made your own onion website now go to: /var/www/html to code your website ;)   (keep it legal plz)" > index.html
+sudo echo "congratration you made your own onion website now go to: /var/www/html to code your website ;)   (keep it legal plz)" > index.html
 cd
 sudo service nginx start
 sudo service tor start
