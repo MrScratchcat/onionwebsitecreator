@@ -1,8 +1,14 @@
+#!/bin/bash
+cd
+echo "sudo service tor restart && sudo service nginx restart" > websiterestart.sh
+echo " echo "webadderss:" && sudo cat /var/lib/tor/hidden_service/hostname && echo " " && echo "here you can edit your html code: \n /var/www/html" " > whereismywebsite.sh
+sudo chmod +x whereismywebsite.sh
+sudo chmod +x websiterestart.sh
 sudo apt update
 sudo apt install -y nginx tor
 sudo service tor stop
 sudo service nginx stop
-echo "## Configuration file for a typical Tor user
+sudo echo "## Configuration file for a typical Tor user
 ## Last updated 9 October 2013 for Tor 0.2.5.2-alpha.
 ## (may or may not work for much older or much newer versions of Tor.)
 ##
@@ -194,7 +200,7 @@ HiddenServicePort 80 127.0.0.1:80
 ## address manually to your friends, uncomment this line:
 #PublishServerDescriptor 0" > /etc/tor/torrc
 
-echo "user www-data;
+sudo echo "user www-data;
 worker_processes auto;
 pid /run/nginx.pid;
 include /etc/nginx/modules-enabled/*.conf;
@@ -282,10 +288,9 @@ cd /var/www/html
 sudo rm index.nginx-debian.html
 echo "congratration you made your own onion website now go to: /var/www/html to code your website ;)   (keep it legal plz)" > index.html
 cd
-echo "sudo service tor restart && sudo service nginx restart" > websiterestart.sh
-sudo chmod +x websiterestart.sh
 sudo service nginx start
 sudo service tor start
+sleep 5s
 clear
 echo "web address:"
 sudo cat /var/lib/tor/hidden_service/hostname
