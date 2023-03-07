@@ -4,6 +4,8 @@ first make the program executeble with: "sudo chmod +x torwebsite.sh"
 then you just need to execute the program with: "sudo bash torwebsite.sh"
 and there you go have fun with your website ;)
 
+note: some times you need to run it twice but good luck 
+
 all in one:
 
 
