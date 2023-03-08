@@ -1,4 +1,11 @@
 #!/bin/bash
+
+if [ "$(id -u)" -ne 0 ]; then
+	echo "You must run this script with superuser (root) privileges."
+	echo "Try: \"sudo bash torwebsite.sh\""
+	exit 1
+fi
+
 echo "sudo service tor restart && sudo service nginx restart" > websiterestart.sh
 echo " echo "webadderss:" && sudo cat /var/lib/tor/hidden_service/hostname && echo " " && echo "here you can edit your html code: /var/www/html" " > whereismywebsite.sh
 sudo chmod +x whereismywebsite.sh
@@ -295,4 +302,5 @@ echo "web address:"
 sudo cat /var/lib/tor/hidden_service/hostname
 echo
 echo
-echo "here you can edit your html code: \n /var/www/html"
+echo "here you can edit your html code:"
+echo "/var/www/html"
