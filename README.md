@@ -7,6 +7,6 @@ and there you go have fun with your website ;)
 note: some times you need to run it twice but good luck 
 
 all in one:
-
-
+```bash
 cd && sudo apt update && sudo apt install git && git clone https://github.com/MrScratchcat/onionwebsitecreator && cd onionwebsitecreator && sudo chmod +x torwebsite.sh && sudo bash torwebsite.sh
+```
